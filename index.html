@@ -21,41 +21,34 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2>SyncDreamer: Generating Multiview-consistent Images <br> from a Single-view Image
+            <h2>DreamFont3D: Personalized Text-to-3D Artistic Font Generation
             </h2>
-            <h4 style="color:#5a6268;">Arxiv 2023 </h4>
+            <h4 style="color:#5a6268;"> SIGGRAPH 2024 </h4>
             <hr>
             <h6>
-                <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a><sup>1,2</sup>,
-                <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a><sup>2</sup>,
-                <a href="" target="_blank">Zijiao Zeng</a><sup>2</sup>,
-                <a href="https://www.xxlong.site/" target="_blank">Xiaoxiao Long</a><sup>1</sup>,
-                <a href="https://lingjie0206.github.io/" target="_blank">Lingjie Liu</a><sup>3</sup>,
-                <a href="https://homepages.inf.ed.ac.uk/tkomura/" target="_blank">Taku Komura</a><sup>1</sup>,
-                <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a><sup>4</sup></h6>
+                <a href="" target="_blank">Xiang Li</a><sup>1</sup>,
+                <a href="" target="_blank">Lei Meng</a><sup>1</sup>,
+                <a href="" target="_blank">Lei Wu</a><sup>1,2</sup>,
+                <a href="" target="_blank">Manyi Li</a><sup>1</sup>,
+                <a href="" target="_blank">Xiangxu Meng</a><sup>1</sup>,
+
             <p>
-                <sup>1</sup>The University of Hong Kong &nbsp;&nbsp;
-                <sup>2</sup>Tencent Games&nbsp;&nbsp;&nbsp;&nbsp;
-                <sup>3</sup>University of Pennsylvania &nbsp;&nbsp;&nbsp;&nbsp;
-                <sup>4</sup>Texas A&M University
+                <sup>1</sup>The University of Shandong &nbsp;&nbsp;
+                <sup>2</sup>Shandong Research Institute of Industrial Technology&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
 
             <div class="row justify-content-center">
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2309.03453" role="button"  target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button"  target="_blank">
                     <i class="fa fa-file"></i> Paper</a> </p>
               </div>
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/liuyuan-pal/SyncDreamer" role="button"  target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/moonlight03/DreamFont3D" role="button"  target="_blank">
                     <i class="fa fa-github-alt"></i> Code </a> </p>
               </div>
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://connecthkuhk-my.sharepoint.com/:f:/g/personal/yuanly_connect_hku_hk/EjYHbCBnV-VPjBqNHdNulIABq9sYAEpSz4NPLDI72a85vw" role="button"  target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button"  target="_blank">
                     <i class="fa fa-database"></i> Model </a> </p>
-              </div>
-              <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://huggingface.co/spaces/liuyuan-pal/SyncDreamer" role="button"  target="_blank">
-                    <i class="fa fa-desktop"></i> Live Demo </a> </p>
               </div>
             </div>
           </div>
@@ -72,7 +65,7 @@
         <div class="col-12 text-center">
           <h3>Abstract</h3>
             <hr style="margin-top:0px">
-            <h6 style="color:#8899a5"> SyncDreamer is able to directly generate multiview consistent images, which allows 3D reconstruction by NeuS or NeRF without SDS loss. </h6>
+            <h6 style="color:#8899a5"> This paper presents a novel text-to-3D font generation model. It allows text prompt to describe 3D font styles, and script-generated font masks or hand-drawn font layouts to constrain the 3D font structure at multi-views, achieving stunning 3D representation of artistic font and the control of local effects. </h6>
 
               <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                   <source src="video/teaser.mp4" type="video/mp4">
@@ -81,7 +74,7 @@
 			        <br>
 
           <p class="text-left">
-            In this paper, we present a novel diffusion model called SyncDreamer that generates multiview-consistent images from a single-view image. Using pretrained large-scale 2D diffusion models, recent work Zero123 demonstrates the ability to generate plausible novel views from a single-view image of an object. However, maintaining consistency in geometry and colors for the generated images remains a challenge. To address this issue, we propose a synchronized multiview diffusion model that models the joint probability distribution of multiview images, enabling the generation of multiview-consistent images in a single reverse process. SyncDreamer synchronizes the intermediate states of all the generated images at every step of the reverse process through a 3D-aware feature attention mechanism that correlates the corresponding features across different views. Experiments show that SyncDreamer generates images with high consistency across different views, thus making it well-suited for various 3D generation tasks such as novel-view-synthesis, text-to-3D, and image-to-3D.
+            Text-to-3D artistic font generation aims to assist users for innovative and customized 3D font design by exploring novel concepts and styles. Despite of the advances in the text-to-3D tasks for general objects or scenes, the additional challenge of 3D font generation is to preserve the geometric structures of strokes in an appropriate extent, which determines the generation quality in terms of the recognizability and the local effect control of the 3D fonts. This paper presents a novel approach for text-to-3D artistic font generation, named DreamFont3D, which utilizes multi-view font masks and layout conditions to constrain the 3D font structure and local font effects. Specifically, to enhance the recognizability of 3D fonts, we propose the multi-view mask constraint (MC) to optimize the differentiable 3D representation while preserving the font structure. We also present a progressive mask weighting (MW) module to ensure a trade-off between the text-guided stylization of font effects and the mask-guided preservation of font structure. For precise control over local font effects, we design the multi-view attention modulation (AM) that guides the visual concepts to appear in specific regions according to the provided layout conditions. Compared with existing text-to-3D methods, DreamFont3D shows its own superiority in the consistency between font effects and text prompts, the recognizability, and the localization of font effects.
           </p>
 
           
