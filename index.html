@@ -23,17 +23,17 @@
           <div class="col-12">
             <h2>DreamFont3D: Personalized Text-to-3D Artistic Font Generation
             </h2>
-            <h4 style="color:#5a6268;"> SIGGRAPH 2024 </h4>
+            <h4 style="color:#5a6268;"> SIGGRAPH 2025 </h4>
             <hr>
             <h6>
                 <a href="" target="_blank">Xiang Li</a><sup>1</sup>,
-                <a href="" target="_blank">Lei Meng</a><sup>1</sup>,
-                <a href="" target="_blank">Lei Wu</a><sup>1,2</sup>,
+                <a href="" target="_blank">Lei Meng</a><sup>1,2</sup>,
+                <a href="" target="_blank">Lei Wu</a><sup>1</sup>,
                 <a href="" target="_blank">Manyi Li</a><sup>1</sup>,
                 <a href="" target="_blank">Xiangxu Meng</a><sup>1</sup>,
 
             <p>
-                <sup>1</sup>The University of Shandong &nbsp;&nbsp;
+                <sup>1</sup>Shandong University&nbsp;&nbsp;
                 <sup>2</sup>Shandong Research Institute of Industrial Technology&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
 
@@ -65,11 +65,12 @@
         <div class="col-12 text-center">
           <h3>Abstract</h3>
             <hr style="margin-top:0px">
-            <h6 style="color:#8899a5"> This paper presents a novel text-to-3D font generation model. It allows text prompt to describe 3D font styles, and script-generated font masks or hand-drawn font layouts to constrain the 3D font structure at multi-views, achieving stunning 3D representation of artistic font and the control of local effects. </h6>
+            <h6 style="color:#8899a5"> This paper presents a novel text-to-3D font generation model, which achieves stunning 3D representation of artistic font and the control of local effects. </h6>
 
-              <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                  <source src="video/teaser.mp4" type="video/mp4">
-              </video>
+              <img src="video/fig1.png" alt="some_text" width="80%" style="margin-top:30px; margin-bottom: 30px;">
+              <!-- <img width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                  <source src="video/fig1.png">
+              </img> -->
 
 			        <br>
 
@@ -77,29 +78,23 @@
             Text-to-3D artistic font generation aims to assist users for innovative and customized 3D font design by exploring novel concepts and styles. Despite of the advances in the text-to-3D tasks for general objects or scenes, the additional challenge of 3D font generation is to preserve the geometric structures of strokes in an appropriate extent, which determines the generation quality in terms of the recognizability and the local effect control of the 3D fonts. This paper presents a novel approach for text-to-3D artistic font generation, named DreamFont3D, which utilizes multi-view font masks and layout conditions to constrain the 3D font structure and local font effects. Specifically, to enhance the recognizability of 3D fonts, we propose the multi-view mask constraint (MC) to optimize the differentiable 3D representation while preserving the font structure. We also present a progressive mask weighting (MW) module to ensure a trade-off between the text-guided stylization of font effects and the mask-guided preservation of font structure. For precise control over local font effects, we design the multi-view attention modulation (AM) that guides the visual concepts to appear in specific regions according to the provided layout conditions. Compared with existing text-to-3D methods, DreamFont3D shows its own superiority in the consistency between font effects and text prompts, the recognizability, and the localization of font effects.
           </p>
 
-          
-          <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-            <source src="video/progress_low.mp4" type="video/mp4">
-        </video>
 
-        <p class="text-center">
-          Reverse process of SyncDreamer's multiview diffusion.
-        </p>
         </div>
       </div>
     </div>
   </section>
   <br>
 
+
   <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Results on the Google Scanned Object dataset</h2>
+            <h3>Overview of the DreamFont3D</h3>
             <hr style="margin-top:0px">
-            <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="video/gso.mp4" type="video/mp4">
-            </video>
+          
+            <img src="video/model.png" alt="some_text" width="90%" style="margin-top:20px; margin-bottom: 20px;">
+
           <p class="text-left">
             
           </p>
@@ -113,80 +108,56 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Text to image to 3D model</h2>
+            <h3>The Results with and without layout conditions</h3>
             <hr style="margin-top:0px">
-            <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="video/t2i.mp4" type="video/mp4">
-            </video>
+          
+            <img src="video/more.png" alt="some_text" width="90%" style="margin-top:20px; margin-bottom: 20px;">
 
           <p class="text-left">
-
+            
           </p>
         </div>
       </div>
     </div>
   </section>
   <br>
-  
+
   <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>2D design to 3D model</h2>
+            <h3>The Results of different font glyph</h3>
             <hr style="margin-top:0px">
-            <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="video/drawings.mp4" type="video/mp4">
-            </video>
+          
+            <img src="video/glyph.png" alt="some_text" width="90%" style="margin-top:20px; margin-bottom: 20px;">
 
-          <p class="text-center">
-              SyncDreamer enables generating 3D models from 2D designs and hand drawings including skectches, Chinese ink paintings, oil paintings and so on.
+          <p class="text-left">
+            
           </p>
         </div>
       </div>
     </div>
   </section>
+ 
   <br>
-
-  
   <section>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Multiple instance generation</h2>
+            <h3>More results</h3>
             <hr style="margin-top:0px">
-            <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="video/multiple.mp4" type="video/mp4">
-            </video>
+          
+            <img src="video/Animation.gif" alt="some_text" width="90%" style="margin-top:20px; margin-bottom: 20px;">
 
-          <p class="text-center">
-            Given the same single-view image, SynDreame allows generating different instances using different random seeds.
+          <p class="text-left">
+            
           </p>
         </div>
       </div>
     </div>
   </section>
+ 
   <br>
-
-  
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-            <h2>More results</h2>
-            <hr style="margin-top:0px">
-            <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="video/more_results.mp4" type="video/mp4">
-            </video>
-
-          <p class="text-center">
-              Test images are downloaded from the Internet and some of them are from <a href="https://wiki.biligame.com/ys/%E9%A6%96%E9%A1%B5" target="_blank">Genshin Impact Wiki</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
 
   <!-- citing -->
   <div class="container">
@@ -195,11 +166,11 @@
           <h3>Citation</h3>
           <hr style="margin-top:0px">
               <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
-<code>@article{liu2023syncdreamer,
-  title={SyncDreamer: Generating Multiview-consistent Images from a Single-view Image},
-  author={Liu, Yuan and Lin, Cheng and Zeng, Zijiao and Long, Xiaoxiao and Liu, Lingjie and Komura, Taku and Wang, Wenping},
-  journal={arXiv preprint arXiv:2309.03453},
-  year={2023}
+<code>@article{dreamfont3d2024,
+  title={DreamFont3D: Personalized Text-to-3D Artistic Font Generation},
+  author={Xiang Li, Lei Meng, Lei Wu, Manyi Li, Xiangxu Meng.},
+  journal={},
+  year={2024}
 }</code>
               </pre>
           <hr>
